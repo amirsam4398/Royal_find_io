@@ -1,0 +1,35 @@
+name: AI Development Task
+description: Safe collaborative development task
+title: "[AI DEV] "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Development objective
+      description: What should be developed?
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current project state
+      description: Read AI_CONTEXT.md first.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files to be changed
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checklist
+      options:
+        - label: Existing functionality will be preserved.
+          required: true
+        - label: Changes will be tested.
+          required: true
+        - label: Main branch will remain protected.
+          required: true
